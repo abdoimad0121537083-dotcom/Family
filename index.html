@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شجرة عائلة عبدالواحد إبراهيم</title>
+<style>
+:root{--ink:#20332c;--green:#315b49;--gold:#c7a76a;--cream:#f7f4ed;--paper:#fffdf8;--muted:#718078;--line:#e6e0d3}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7}
+header{background:linear-gradient(125deg,#203d32,#426c56);color:white;padding:22px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-size:21px;font-weight:bold}.brand small{display:block;font-size:12px;color:#e7ddc8;font-weight:normal}
+button{border:0;border-radius:10px;padding:11px 17px;cursor:pointer;font:inherit;font-weight:bold}
+.primary{background:var(--gold);color:#23372e}.secondary{background:#e9eee9;color:var(--green)}.danger{background:#f8e5e2;color:#9d342a}.outline{background:transparent;color:white;border:1px solid #ffffff88}
+main{max-width:1100px;margin:30px auto;padding:0 18px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;margin-bottom:22px;box-shadow:0 8px 25px #263b2c0b}
+h1,h2,h3{margin-top:0}h1{font-size:30px}h2{font-size:22px;color:var(--green)}.muted{color:var(--muted)}
+.hero{text-align:center;padding:48px 25px;background:linear-gradient(140deg,#fffdf8,#f0eadc);border:1px solid var(--line);border-radius:22px}
+.hero .mark{font-size:44px}.hero p{max-width:720px;margin:12px auto 22px}
+.hidden{display:none!important}.tree{text-align:center}.parents{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.person{display:inline-block;min-width:180px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:7px;box-shadow:0 4px 12px #1d35250a}
+.person strong{display:block;color:var(--green);font-size:17px}.person small{color:var(--muted)}
+.connector{width:2px;height:28px;background:var(--gold);margin:auto}.siblings{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;border-top:2px solid var(--gold);padding-top:18px;margin:0 auto;max-width:980px}
+.siblings .person{min-width:145px;flex:1 1 145px;max-width:190px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+label{display:block;font-weight:bold;margin:10px 0 5px}input,select,textarea{width:100%;padding:11px;border:1px solid #d8d2c5;border-radius:9px;font:inherit;background:white}textarea{min-height:90px}
+.formrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.notice{background:#f4eddd;border-right:4px solid var(--gold);padding:12px 15px;border-radius:8px;font-size:13px}
+footer{text-align:center;color:var(--muted);padding:22px;font-size:13px}
+.modal{position:fixed;inset:0;background:#13251dcc;display:grid;place-items:center;padding:18px;z-index:5}
+.modalbox{background:var(--paper);border-radius:18px;padding:25px;width:min(440px,100%);box-shadow:0 20px 60px #0004}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.member-actions{display:flex;justify-content:center;gap:6px;margin-top:8px}.member-actions button{padding:5px 9px;font-size:12px}
+hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+@media(max-width:600px){h1{font-size:24px}.panel{padding:17px}.person{min-width:135px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">🌿 شجرة العائلة <small>عائلة عبدالواحد إبراهيم</small></div>
+  <div class="toolbar" style="margin:0">
+    <button class="outline" onclick="showLogin()">دخول المسؤول</button>
+  </div>
+</header>
+
+<main>
+<section id="welcome" class="hero">
+  <div class="mark">🌳</div>
+  <h1>أهلاً وسهلاً بكم في منصة العائلة</h1>
+  <p>هذه المنصة مساحة تجمع أفراد أسرتنا، وتعرّفنا بجذور العائلة وروابطها، وتحفظ أسماء أفرادها وبياناتهم في شجرة عائلية واحدة. نرجو أن تكون جسراً للتواصل وصلة الرحم وتوثيق تاريخ الأسرة للأجيال القادمة.</p>
+  <p><strong>الأب:</strong> عبدالواحد إبراهيم &nbsp; | &nbsp; <strong>الأم:</strong> فاطمه</p>
+  <p class="muted">تضم الأسرة خمسة أبناء وأربع بنات، ويمكن للمسؤول إضافة الأسماء والبيانات وتحديثها.</p>
+  <button class="primary" onclick="enterPlatform()">موافق، الدخول إلى المنصة</button>
+</section>
+
+<section id="platform" class="hidden">
+  <div class="panel">
+    <h1>مرحباً بكم في بيت العائلة 🌿</h1>
+    <p class="muted">مكان يجمعنا مهما تباعدت المسافات.</p>
+    <div class="toolbar">
+      <button class="secondary" onclick="showTree()">شجرة العائلة</button>
+      <button class="secondary" onclick="showAbout()">عن الأسرة والمنصة</button>
+      <button id="adminPanelBtn" class="primary hidden" onclick="showAdmin()">لوحة تحكم المسؤول</button>
+    </div>
+  </div>
+  <section id="treeView" class="panel">
+    <h2>شجرة العائلة</h2>
+    <div id="tree" class="tree"></div>
+  </section>
+  <section id="aboutView" class="panel hidden">
+    <h2>عن الأسرة والمنصة</h2>
+    <p>تبدأ شجرة هذه الأسرة بالأب عبدالواحد إبراهيم والأم فاطمه، وتضم خمسة أبناء وأربع بنات. تهدف المنصة إلى تنظيم معلومات أفراد الأسرة وتسهيل التعارف والتواصل وحفظ الروابط العائلية.</p>
+    <p class="muted">يمكن للمسؤول تحديث الأسماء وإضافة معلومات تعريفية مناسبة بموافقة أصحابها.</p>
+  </section>
+  <section id="adminView" class="panel hidden">
+    <h2>لوحة تحكم المسؤول</h2>
+    <p class="muted">من هنا يمكنك إدارة بيانات أفراد الأسرة وإعدادات الدخول.</p>
+    <div class="toolbar">
+      <button class="secondary" onclick="document.getElementById('memberForm').scrollIntoView({behavior:'smooth'})">إضافة فرد</button>
+      <button class="secondary" onclick="exportData()">تصدير نسخة احتياطية</button>
+      <button class="secondary" onclick="document.getElementById('importFile').click()">استيراد نسخة</button>
+      <input id="importFile" type="file" accept="application/json" class="hidden" onchange="importData(event)">
+    </div>
+    <div class="notice">التغييرات تُحفظ تلقائياً في هذا المتصفح. احتفظ بنسخة احتياطية من وقت لآخر.</div>
+    <hr>
+    <h3>إضافة / تعديل فرد من العائلة</h3>
+    <form id="memberForm" onsubmit="saveMember(event)">
+      <input type="hidden" id="memberId">
+      <div class="formrow">
+        <div><label for="memberName">الاسم</label><input id="memberName" required placeholder="اسم الفرد"></div>
+        <div><label for="memberGender">النوع</label><select id="memberGender"><option value="ذكر">ذكر</option><option value="أنثى">أنثى</option></select></div>
+        <div><label for="memberRelation">صلة القرابة</label><select id="memberRelation"><option value="ابن">ابن</option><option value="ابنة">ابنة</option></select></div>
+      </div>
+      <label for="memberParent">الأب / الأم (الشخص الذي تريد إضافة ابنه أو حفيده تحته)</label>
+      <select id="memberParent"><option value="">الأب عبدالواحد إبراهيم والأم فاطمه</option></select>
+      <label for="memberInfo">نبذة (اختياري)</label><textarea id="memberInfo" placeholder="معلومات تعريفية مختصرة"></textarea>
+      <div class="actions"><button class="primary" type="submit">حفظ البيانات</button><button class="secondary" type="button" onclick="resetForm()">إلغاء</button></div>
+    </form>
+    <hr>
+    <h3>إعدادات المسؤول</h3>
+    <form onsubmit="changeCredentials(event)">
+      <div class="formrow">
+        <div><label for="newUser">اسم المسؤول الجديد</label><input id="newUser" required></div>
+        <div><label for="newPass">كلمة المرور الجديدة</label><input id="newPass" type="password" required minlength="4"></div>
+      </div>
+      <button class="primary" type="submit">تحديث بيانات الدخول</button>
+    </form>
+    <hr><h3>إدارة أفراد الشجرة</h3><div id="adminMembers" class="grid"></div>
+    <div class="actions"><button class="danger" onclick="logout()">تسجيل خروج المسؤول</button></div>
+  </section>
+</section>
+</main>
+<footer>منصة عائلة عبدالواحد إبراهيم • صلة الرحم تجمعنا</footer>
+
+<div id="loginModal" class="modal hidden">
+  <div class="modalbox">
+    <h2>دخول المسؤول</h2>
+    <p class="muted">أدخل بيانات المسؤول للوصول إلى لوحة التحكم.</p>
+    <form onsubmit="login(event)">
+      <label for="loginUser">اسم المستخدم</label><input id="loginUser" autocomplete="username" required>
+      <label for="loginPass">كلمة المرور</label><input id="loginPass" type="password" autocomplete="current-password" required>
+      <div id="loginError" class="muted" style="color:#a33"></div>
+      <div class="actions"><button class="primary" type="submit">دخول</button><button class="secondary" type="button" onclick="hideLogin()">إلغاء</button></div>
+    </form>
+  </div>
+</div>
+<script>
+const KEY='family_platform_data_v1';
+const initial={
+  admin:{username:'abdo',password:'Sudani'},
+  parents:{father:'عبدالواحد إبراهيم',mother:'فاطمه'},
+  members:[
+    ...Array.from({length:5},(_,i)=>({id:'son'+(i+1),name:'الابن '+(i+1),gender:'ذكر',relation:'ابن',info:''})),
+    ...Array.from({length:4},(_,i)=>({id:'daughter'+(i+1),name:'البنت '+(i+1),gender:'أنثى',relation:'ابنة',info:''}))
+  ]
+};
+let data=loadData(),isAdmin=false;
+data.members.forEach(m=>{if(typeof m.parentId==='undefined')m.parentId=''});
+function loadData(){try{return JSON.parse(localStorage.getItem(KEY))||structuredClone(initial)}catch(e){return JSON.parse(JSON.stringify(initial))}}
+function persist(){localStorage.setItem(KEY,JSON.stringify(data))}
+function enterPlatform(){document.getElementById('welcome').classList.add('hidden');document.getElementById('platform').classList.remove('hidden');showTree()}
+function showLogin(){document.getElementById('loginModal').classList.remove('hidden')}
+function hideLogin(){document.getElementById('loginModal').classList.add('hidden')}
+function login(e){e.preventDefault();const u=document.getElementById('loginUser').value,p=document.getElementById('loginPass').value;if(u===data.admin.username&&p===data.admin.password){isAdmin=true;hideLogin();document.getElementById('adminPanelBtn').classList.remove('hidden');showAdmin()}else{document.getElementById('loginError').textContent='اسم المستخدم أو كلمة المرور غير صحيحة.'}}
+function logout(){isAdmin=false;document.getElementById('adminPanelBtn').classList.add('hidden');showTree()}
+function showTree(){['treeView','aboutView','adminView'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('treeView').classList.remove('hidden');renderTree()}
+function showAbout(){['treeView','aboutView','adminView'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('aboutView').classList.remove('hidden')}
+function showAdmin(){if(!isAdmin)return;['treeView','aboutView','adminView'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('adminView').classList.remove('hidden');renderAdmin()}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderTree(){
+ const childrenOf = parentId => data.members.filter(m => (m.parentId || '') === parentId);
+ function branch(parentId, depth=0){
+   const kids=childrenOf(parentId);
+   if(!kids.length)return '';
+   return `<div class="siblings" style="margin-top:${depth?14:0}px">${kids.map(m=>`
+     <div class="person" style="flex:1 1 155px;max-width:220px">
+       <strong>${esc(m.name)}</strong><small>${esc(m.relation)} • ${esc(m.gender)}</small>
+       ${m.info?`<p class="muted">${esc(m.info)}</p>`:''}
+       ${branch(m.id,depth+1)}
+     </div>`).join('')}</div>`;
+ }
+ document.getElementById('tree').innerHTML=
+ `<div class="parents"><div class="person"><strong>الأب</strong>${esc(data.parents.father)}</div><div class="person"><strong>الأم</strong>${esc(data.parents.mother)}</div></div>
+ <div class="connector"></div><h3>الأبناء والأحفاد</h3>${branch('')||'<p>لا توجد أسماء مسجلة بعد.</p>'}`;
+}
+function renderAdmin(){
+ const parentSelect=document.getElementById('memberParent');
+ const oldValue=parentSelect.value;
+ parentSelect.innerHTML='<option value="">الأب عبدالواحد إبراهيم والأم فاطمه</option>'+
+   data.members.map(m=>`<option value="${esc(m.id)}">${esc(m.name)}</option>`).join('');
+ if([...parentSelect.options].some(o=>o.value===oldValue))parentSelect.value=oldValue;
+ document.getElementById('adminMembers').innerHTML=data.members.map(m=>{
+   const parent=data.members.find(x=>x.id===(m.parentId||''));
+   return `<div class="person"><strong>${esc(m.name)}</strong><small>${esc(m.relation)} • ${esc(m.gender)}${parent?' • والد/والدة: '+esc(parent.name):' • من أبناء الأسرة الأساسيين'}</small><div class="member-actions"><button class="secondary" onclick="editMember('${m.id}')">تعديل</button><button class="danger" onclick="deleteMember('${m.id}')">حذف</button></div></div>`;
+ }).join('');
+ document.getElementById('newUser').value=data.admin.username
+}
+function saveMember(e){
+ e.preventDefault();if(!isAdmin)return;
+ const id=document.getElementById('memberId').value;
+ const parentId=document.getElementById('memberParent').value;
+ if(id===parentId){alert('لا يمكن أن يكون الشخص والداً لنفسه.');return}
+ // منع إنشاء علاقة نسب دائرية
+ let ancestor=parentId,loop=false;
+ while(ancestor){if(ancestor===id){loop=true;break}const p=data.members.find(x=>x.id===ancestor);ancestor=p?(p.parentId||''):''}
+ if(loop){alert('لا يمكن اختيار أحد أحفاد هذا الشخص كوالد له.');return}
+ const m={id:id||('m'+Date.now()),name:document.getElementById('memberName').value.trim(),gender:document.getElementById('memberGender').value,relation:document.getElementById('memberRelation').value,parentId,info:document.getElementById('memberInfo').value.trim()};
+ if(id){data.members=data.members.map(x=>x.id===id?m:x)}else data.members.push(m);
+ persist();resetForm();renderAdmin();renderTree()
+}
+function editMember(id){
+ const m=data.members.find(x=>x.id===id);if(!m)return;
+ document.getElementById('memberId').value=m.id;
+ document.getElementById('memberName').value=m.name;
+ document.getElementById('memberGender').value=m.gender;
+ document.getElementById('memberRelation').value=m.relation;
+ document.getElementById('memberInfo').value=m.info||'';
+ document.getElementById('memberParent').value=m.parentId||'';
+ document.getElementById('memberForm').scrollIntoView({behavior:'smooth'})
+}
+function deleteMember(id){
+ if(!isAdmin||!confirm('سيتم حذف هذا الفرد وأبنائه وأحفاده من الشجرة. هل تريد المتابعة؟'))return;
+ const remove=new Set([id]);let changed=true;
+ while(changed){changed=false;data.members.forEach(m=>{if(remove.has(m.parentId)&&!remove.has(m.id)){remove.add(m.id);changed=true}})}
+ data.members=data.members.filter(m=>!remove.has(m.id));persist();renderAdmin();renderTree()
+}
+function resetForm(){document.getElementById('memberForm').reset();document.getElementById('memberId').value=''}
+function changeCredentials(e){e.preventDefault();if(!isAdmin)return;data.admin.username=document.getElementById('newUser').value.trim();data.admin.password=document.getElementById('newPass').value;persist();document.getElementById('newPass').value='';alert('تم تحديث بيانات المسؤول. استخدم البيانات الجديدة في المرة القادمة.')}
+function exportData(){const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='family-backup.json';a.click();URL.revokeObjectURL(a.href)}
+function importData(e){const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.admin||!Array.isArray(d.members)||!d.parents)throw Error();data=d;persist();renderAdmin();renderTree();alert('تم استيراد النسخة الاحتياطية.')}catch(err){alert('الملف غير صالح أو لا يطابق نسخة المنصة.')}};r.readAsText(file);e.target.value=''}
+renderTree();
+</script>
+</body>
+</html>
